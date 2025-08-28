@@ -12,31 +12,34 @@
 </head>
 <body class="bg-green-50">
   <!-- Navbar -->
-  <nav class="flex justify-between items-center bg-[#ffffff] px-6 py-4 shadow">
-    <!-- Left -->
-    <div class="flex items-center gap-2 text-[#006747] text-lg">
-      <div><img src="./assets/logo.png" alt="logo" class="w-12 h-12"></div>
-      <div class="font-bold">Emergency <br>Service</div>
+  <nav class="flex flex-wrap justify-between items-center bg-[#ffffff] px-4 py-3 shadow">
+  <!-- Left -->
+  <div class="flex flex-wrap items-center gap-2 text-[#006747] text-lg">
+    <div><img src="./assets/logo.png" alt="logo" class="w-12 h-12"></div>
+    <div class="font-bold text-sm sm:text-base">
+      Emergency <br>Service
     </div>
+  </div>
 
-    <!-- Right -->
-    <div class="flex items-center gap-4">
-      <!-- Heart -->
-      <div class="flex items-center gap-1 bg-gray-100 px-3 py-1 rounded-full text-red-600 font-semibold text-sm">
-        <span id="heartCount">0</span>
-        <img class="h-[30px] w-[30px]" src="./assets/heart.png" alt="">
-      </div>
-      <!-- Coin -->
-      <div class="flex items-center gap-1 bg-gray-100 px-3 py-1 rounded-full text-yellow-600 font-semibold text-sm">
-        <span id="coinCount">100</span>
-        <img class="h-[30px] w-[30px]" src="./assets/coin.png" alt="">
-      </div>
-      <!-- Copy -->
-      <div class="flex items-center justify-center gap-1 bg-[#006747] px-3 py-1 rounded-full h-[40px] w-[90px] text-white font-semibold text-sm">
-        <span id="copyCount">0</span> Copy
-      </div>
+  <!-- Right -->
+  <div class="flex flex-wrap items-center gap-2 sm:gap-4 mt-2 sm:mt-0">
+    <!-- Heart -->
+    <div class="flex items-center gap-1 bg-gray-100 px-2 sm:px-3 py-1 rounded-full text-red-600 font-semibold text-xs sm:text-sm">
+      <span id="heartCount">0</span>
+      <img class="h-[25px] w-[25px] sm:h-[30px] sm:w-[30px]" src="./assets/heart.png" alt="">
     </div>
-  </nav>
+    <!-- Coin -->
+    <div class="flex items-center gap-1 bg-gray-100 px-2 sm:px-3 py-1 rounded-full text-yellow-600 font-semibold text-xs sm:text-sm">
+      <span id="coinCount">100</span>
+      <img class="h-[25px] w-[25px] sm:h-[30px] sm:w-[30px]" src="./assets/coin.png" alt="">
+    </div>
+    <!-- Copy -->
+    <div class="flex items-center justify-center gap-1 bg-[#006747] px-2 sm:px-3 py-1 rounded-full h-[35px] sm:h-[40px] w-[75px] sm:w-[90px] text-white font-semibold text-xs sm:text-sm">
+      <span id="copyCount">0</span> Copy
+    </div>
+  </div>
+</nav>
+
 
   <!-- Hero Section -->
   <section class="bg-gradient-to-r from-[#013A29] via-[#006747] to-[#013A29] text-white py-8 text-center">
