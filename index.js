@@ -29,7 +29,7 @@ function makeCall(serviceName, number) {
   let currentCoins = parseInt(coinCountEl.innerText);
 
   if (currentCoins < 20) {
-    alert("❌ Not enough coins to make this call.");
+    alert("❌ Not enough coins to make this call. Please wait until you have enough coins.");
     return;
   }
 
