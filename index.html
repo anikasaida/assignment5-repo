@@ -10,25 +10,26 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-..." crossorigin="anonymous" referrerpolicy="no-referrer" />
 
 </head>
-<body>
-    <nav class="flex justify-between items-center bg-[#ffffff] px-6 py-4 shadow">
+<body class="bg-green-50">
+  <!-- Navbar -->
+  <nav class="flex justify-between items-center bg-[#ffffff] px-6 py-4 shadow">
     <!-- Left -->
-
-    
     <div class="flex items-center gap-2 text-[#006747] text-lg">
-        <div><img src="./assets/logo.png" alt="logo" class="w-12 h-12"></div>
-         <div class="font-bold">Emergency <br>Service</div>   
+      <div><img src="./assets/logo.png" alt="logo" class="w-12 h-12"></div>
+      <div class="font-bold">Emergency <br>Service</div>
     </div>
 
     <!-- Right -->
     <div class="flex items-center gap-4">
       <!-- Heart -->
       <div class="flex items-center gap-1 bg-gray-100 px-3 py-1 rounded-full text-red-600 font-semibold text-sm">
-        <img class="h-[30px] w-[30px]" src="./assets/heart.png" alt=""><span id="heartCount">0</span>
+        <span id="heartCount">0</span>
+        <img class="h-[30px] w-[30px]" src="./assets/heart.png" alt="">
       </div>
       <!-- Coin -->
       <div class="flex items-center gap-1 bg-gray-100 px-3 py-1 rounded-full text-yellow-600 font-semibold text-sm">
-        <img class="h-[30px] w-[30px]" src="./assets/coin.png"  alt=""> <span id="coinCount">100</span>
+        <span id="coinCount">100</span>
+        <img class="h-[30px] w-[30px]" src="./assets/coin.png" alt="">
       </div>
       <!-- Copy -->
       <div class="flex items-center justify-center gap-1 bg-[#006747] px-3 py-1 rounded-full h-[40px] w-[90px] text-white font-semibold text-sm">
@@ -38,214 +39,203 @@
   </nav>
 
   <!-- Hero Section -->
-<section class="bg-gradient-to-r from-[#013A29] via-[#006747] to-[#013A29] text-white py-8 text-center">
-  <!-- Logo -->
-  <div class="flex justify-center mb-4">
-    <img src="./assets/logo.png" alt="logo" class="w-20 h-20">
-  </div>
-
-  <!-- Title -->
-  <h1 class="text-3xl md:text-4xl font-bold mb-2">
-    Emergency Service Directory
-  </h1>
-
-  <!-- Subtitle -->
-  <p class="text-sm md:text-base">
-    Government Emergency Services at Your Fingertip – A Project by Government of the People’s Republic of Bangladesh
-  </p>
-</section>
-
-<main class="container mx-auto px-6 py-10 grid grid-cols-1 lg:grid-cols-4 gap-6">
-  
-  <!-- Hotline Cards Grid -->
-  <section class="lg:col-span-3 grid sm:grid-cols-2 md:grid-cols-3 gap-6">
-    
-    <!-- Card 1 -->
-    <div class="bg-white shadow rounded-xl p-5 flex flex-col justify-between">
-      <div>
-        <div class="flex items-center justify-between mb-3">
-          <img src="./assets/emergency.png" alt="Emergency" class="w-8 h-8 inline-block  px-1 py-1  border-red-300 bg-red-100 text-red-600 rounded-lg">
-          <i class="fa-regular fa-heart"></i>
-        </div>
-        <h2 class="text-lg font-bold">National Emergency Number</h2>
-        <p class="text-gray-500 text-sm">National Emergency</p>
-        <p class="mt-2 text-xl font-extrabold">999</p>
-        <span class="inline-block mt-2 px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-xs font-semibold">All</span>
-      </div>
-      <div class="flex justify-between gap-2 mt-4">
-        <button class="flex-1 bg-gray-100 hover:bg-gray-200 text-gray-700 font-semibold py-2 rounded-lg" onclick="copyNumber('999')"><i class="fa-regular fa-copy"></i> Copy</button>
-        <button class="flex-1 bg-green-600 hover:bg-green-700 text-white font-semibold py-2 rounded-lg" onclick="makeCall('National Emergency','999')">Call</button>
-      </div>
+  <section class="bg-gradient-to-r from-[#013A29] via-[#006747] to-[#013A29] text-white py-8 text-center">
+    <!-- Logo -->
+    <div class="flex justify-center mb-4">
+      <img src="./assets/logo-dark.png" alt="logo" class="w-20 h-20">
     </div>
-
-    <!-- Card 2 -->
-    <div class="bg-white shadow rounded-xl p-5 flex flex-col justify-between">
-      <div>
-        <div class="flex items-center justify-between mb-3">
-          <img src="./assets/police.png" alt="police" class="w-8 h-8 inline-block  px-1 py-1  border-blue-300 bg-blue-100 text-blue-600 rounded-lg">
-                    <i class="fa-regular fa-heart"></i>
-
-        </div>
-        <h2 class="text-lg font-bold">Police Helpline Number</h2>
-        <p class="text-gray-500 text-sm">Police</p>
-        <p class="mt-2 text-xl font-extrabold ">999</p>
-        <span class="inline-block mt-2 px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-xs font-semibold">Police</span>
-      </div>
-      <div class="flex justify-between gap-2 mt-4">
-        <button class="flex-1 bg-gray-100 hover:bg-gray-200 text-gray-700 font-semibold py-2 rounded-lg" onclick="copyNumber('999')"><i class="fa-regular fa-copy"></i> Copy</button>
-        <button class="flex-1 bg-green-600 hover:bg-green-700 text-white font-semibold py-2 rounded-lg" onclick="makeCall('police','999')">Call</button>
-      </div>
-    </div>
-
-    <!-- Card 3 -->
-    <div class="bg-white shadow rounded-xl p-5 flex flex-col justify-between">
-      <div>
-        <div class="flex items-center justify-between mb-3">
-          <img src="./assets/fire-service.png" alt="fire-service" class="w-8 h-8 inline-block  px-1 py-1  border-red-300 bg-red-100 text-red-600 rounded-lg">
-                              <i class="fa-regular fa-heart"></i>
-
-        </div>
-        <h2 class="text-lg font-bold">Fire Service Number</h2>
-        <p class="text-gray-500 text-sm">Fire Service</p>
-        <p class="mt-2 text-xl font-extrabold">999</p>
-        <span class="inline-block mt-2 px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-xs font-semibold">Fire</span>
-      </div>
-      <div class="flex justify-between gap-2 mt-4">
-        <button class="flex-1 bg-gray-100 hover:bg-gray-200 text-gray-700 font-semibold py-2 rounded-lg" onclick="copyNumber('999')"><i class="fa-regular fa-copy"></i> Copy</button>
-        <button class="flex-1 bg-green-600 hover:bg-green-700 text-white font-semibold py-2 rounded-lg" onclick="makeCall('Ambulance','999')">Call</button>
-      </div>
-    </div>
-
-    <!-- Card 4 -->
-    <div class="bg-white shadow rounded-xl p-5 flex flex-col justify-between">
-      <div>
-        <div class="flex items-center justify-between mb-3">
-          <img src="./assets/ambulance.png" alt="ambulance" class="w-8 h-8 inline-block  px-1 py-1  border-red-300 bg-red-100 text-red-600 rounded-lg">
-              <i class="fa-regular fa-heart"></i>
-    
-        </div>
-        <h2 class="text-lg font-bold">Ambulance Service</h2>
-        <p class="text-gray-500 text-sm">Ambulance</p>
-        <p class="mt-2 text-xl font-extrabold">1994-999999</p>
-        <span class="inline-block mt-2 px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-xs font-semibold">Health</span>
-      </div>
-      <div class="flex justify-between gap-2 mt-4">
-        <button class="flex-1 bg-gray-100 hover:bg-gray-200 text-gray-700 font-semibold py-2 rounded-lg" onclick="copyNumber('1994-999999')"><i class="fa-regular fa-copy"></i> Copy</button>
-        <button class="flex-1 bg-green-600 hover:bg-green-700 text-white font-semibold py-2 rounded-lg" onclick="makeCall('Health','1994-999999')">Call</button>
-      </div>
-    </div>
-
-    <!-- Card 5 -->
-    <div class="bg-white shadow rounded-xl p-5 flex flex-col justify-between">
-      <div>
-        <div class="flex items-center justify-between mb-3">
-          <img src="./assets/emergency.png" alt="Woman & Child Helpline" class="w-8 h-8 inline-block  px-1 py-1  border-red-300 bg-red-100 text-red-600 rounded-lg">
-        <i class="fa-regular fa-heart"></i>
-
-        </div>
-        <h2 class="text-lg font-bold">Women & Child Helpline</h2>
-        <p class="text-gray-500 text-sm">Women & Child Helpline</p>
-        <p class="mt-2 text-xl font-extrabold">109</p>
-        <span class="inline-block mt-2 px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-xs font-semibold">Help</span>
-      </div>
-      <div class="flex justify-between gap-2 mt-4">
-        <button class="flex-1 bg-gray-100 hover:bg-gray-200 text-gray-700 font-semibold py-2 rounded-lg" onclick="copyNumber('109')"><i class="fa-regular fa-copy"></i> Copy</button>
-        <button class="flex-1 bg-green-600 hover:bg-green-700 text-white font-semibold py-2 rounded-lg" onclick="makeCall('Women & Child Helpline','109')">Call</button>
-      </div>
-    </div>
-
-    <!-- Card 6 -->
-    <div class="bg-white shadow rounded-xl p-5 flex flex-col justify-between">
-      <div>
-        <div class="flex items-center justify-between mb-3">
-          <img src="./assets/emergency.png" alt="" class="w-8 h-8 inline-block  px-1 py-1  border-red-300 bg-red-100 text-red-600 rounded-lg">
-                  <i class="fa-regular fa-heart"></i>
-
-        </div>
-        <h2 class="text-lg font-bold">Anti-Corruption Helpline</h2>
-        <p class="text-gray-500 text-sm">Anti-Corruption</p>
-        <p class="mt-2 text-xl font-extrabold ">106</p>
-        <span class="inline-block mt-2 px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-xs font-semibold">Govt.</span>
-      </div>
-      <div class="flex justify-between gap-2 mt-4">
-        <button class="flex-1 bg-gray-100 hover:bg-gray-200 text-gray-700 font-semibold py-2 rounded-lg" onclick="copyNumber('106')"><i class="fa-regular fa-copy"></i> Copy</button>
-        <button class="flex-1 bg-green-600 hover:bg-green-700 text-white font-semibold py-2 rounded-lg" onclick="makeCall('Govt.','106')">Call</button>
-      </div>
-    </div>
-
-    <!-- Card 7 -->
-    <div class="bg-white shadow rounded-xl p-5 flex flex-col justify-between">
-      <div>
-        <div class="flex items-center justify-between mb-3">
-          <img src="./assets/emergency.png" alt="Gas Emergency" class="w-8 h-8 inline-block  px-1 py-1  border-red-300 bg-red-100 text-red-600 rounded-lg">
-                        <i class="fa-regular fa-heart"></i>
-    
-        </div>
-        <h2 class="text-lg font-bold">Electricity Helpline</h2>
-        <p class="text-gray-500 text-sm">Electricity Outage</p>
-        <p class="mt-2 text-xl font-extrabold">16456</p>
-        <span class="inline-block mt-2 px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-xs font-semibold">Electricity</span>
-      </div>
-      <div class="flex justify-between gap-2 mt-4">
-        <button class="flex-1 bg-gray-100 hover:bg-gray-200 text-gray-700 font-semibold py-2 rounded-lg" onclick="copyNumber('16456')"><i class="fa-regular fa-copy"></i> Copy</button>
-        <button class="flex-1 bg-green-600 hover:bg-green-700 text-white font-semibold py-2 rounded-lg" onclick="makeCall('Gas Emergency','16456')">Call</button>
-      </div>
-    </div>
-
-    <!-- Card 8 -->
-    <div class="bg-white shadow rounded-xl p-5 flex flex-col justify-between">
-      <div>
-        <div class="flex items-center justify-between mb-3">
-          <img src="./assets/emergency.png" alt="" class="w-8 h-8 inline-block  px-1 py-1  border-red-300 bg-red-100 text-red-600 rounded-lg">
-                            <i class="fa-regular fa-heart"></i>
-      
-        </div>
-        <h2 class="text-lg font-bold">Brac Helpline</h2>
-        <p class="text-gray-500 text-sm">Brac</p>
-        <p class="mt-2 text-xl font-extrabold ">16445</p>
-        <span class="inline-block mt-2 px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-xs font-semibold">NGO</span>
-      </div>
-      <div class="flex justify-between gap-2 mt-4">
-        <button class="flex-1 bg-gray-100 hover:bg-gray-200 text-gray-700 font-semibold py-2 rounded-lg" onclick="copyNumber('16445')"><i class="fa-regular fa-copy"></i> Copy</button>
-        <button class="flex-1 bg-green-600 hover:bg-green-700 text-white font-semibold py-2 rounded-lg" onclick="makeCall('Brac Helpline','16445')">Call</button> 
-      </div>
-    </div>
-
-    <!-- Card 9 -->
-    <div class="bg-white shadow rounded-xl p-5 flex flex-col justify-between">
-      <div>
-        <div class="flex items-center justify-between mb-3">
-          <img src="./assets/emergency.png" alt="Railway Emergency" class="w-8 h-8 inline-block  px-1 py-1  border-red-300 bg-red-100 text-red-600 rounded-lg">
-             <i class="fa-regular fa-heart"></i>
-
-        </div>
-        <h2 class="text-lg font-bold">Bangladesh Railway Helpline </h2>
-        <p class="text-gray-500 text-sm">Bangladesh Railway</p>
-        <p class="mt-2 text-xl font-extrabold ">163</p>
-        <span class="inline-block mt-2 px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-xs font-semibold">Travel</span>
-      </div>
-      <div class="flex justify-between gap-2 mt-4">
-        <button class="flex-1 bg-gray-100 hover:bg-gray-200 text-gray-700 font-semibold py-2 rounded-lg" onclick="copyNumber('163')"><i class="fa-regular fa-copy"></i> Copy</button>
-        <button class="flex-1 bg-green-600 hover:bg-green-700 text-white font-semibold py-2 rounded-lg" onclick="makeCall('Railway Emergency','163')">Call</button>
-      </div>
-    </div>
-
+    <!-- Title -->
+    <h1 class="text-3xl md:text-4xl font-bold mb-2">
+      Emergency Service Directory
+    </h1>
+    <!-- Subtitle -->
+    <p class="text-sm md:text-base">
+      Government Emergency Services at Your Fingertip – A Project by Government of the People’s Republic of Bangladesh
+    </p>
   </section>
 
-  <!-- Call History Section -->
-  <aside class="bg-white shadow rounded-xl p-5">
-    <div class="flex justify-between items-center mb-4">
-      <h2 class="text-lg font-bold flex items-center gap-2"><i class="fa-regular fa-clock"></i> Call History</h2>
-      <button class="bg-green-700 hover:bg-green-600 text-white px-5 py-2 rounded-full text-sm" onclick="clearHistory()">Clear</button>
-    </div>
-    <ul id="historyList" class="space-y-2 text-sm text-gray-700 max-h-[500px] overflow-y-auto">
-      <!-- Dynamic history items -->
-    </ul>
-  </aside>
+  <!-- Main Section -->
+  <main class="container mx-auto px-6 py-10 grid grid-cols-1 lg:grid-cols-4 gap-6">
+    <!-- Hotline Cards Grid -->
+    <section class="lg:col-span-3 grid sm:grid-cols-2 md:grid-cols-3 gap-6">
 
-</main>
+      <!-- Card 1 -->
+      <div class="bg-white shadow rounded-xl p-5 flex flex-col justify-between">
+        <div>
+          <div class="flex items-center justify-between mb-3">
+            <img src="./assets/emergency.png" alt="Emergency" class="w-8 h-8 px-1 py-1 border-red-300 bg-red-100 text-red-600 rounded-lg">
+            <i class="fa-regular fa-heart heart-icon cursor-pointer"></i>
+          </div>
+          <h2 class="text-lg font-bold">National Emergency Number</h2>
+          <p class="text-gray-500 text-sm">National Emergency</p>
+          <p class="mt-2 text-xl font-extrabold">999</p>
+          <span class="inline-block mt-2 px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-xs font-semibold">All</span>
+        </div>
+        <div class="flex justify-between gap-2 mt-4">
+          <button class="flex-1 bg-gray-100 hover:bg-gray-900 text-gray-700 font-semibold py-2 rounded-lg" onclick="copyNumber('999')"><i class="fa-regular fa-copy"></i> Copy</button>
+          <button class="flex-1 bg-green-600 hover:bg-green-700 text-white font-semibold py-2 rounded-lg" onclick="makeCall('National Emergency','999')"><i class="fa-solid fa-phone"></i> Call</button>
+        </div>
+      </div>
 
+      <!-- Card 2 -->
+      <div class="bg-white shadow rounded-xl p-5 flex flex-col justify-between">
+        <div>
+          <div class="flex items-center justify-between mb-3">
+            <img src="./assets/police.png" alt="Police" class="w-8 h-8 px-1 py-1 border-blue-300 bg-blue-100 text-blue-600 rounded-lg">
+            <i class="fa-regular fa-heart heart-icon cursor-pointer"></i>
+          </div>
+          <h2 class="text-lg font-bold">Police Helpline Number</h2>
+          <p class="text-gray-500 text-sm">Police</p>
+          <p class="mt-2 text-xl font-extrabold">999</p>
+          <span class="inline-block mt-2 px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-xs font-semibold">Police</span>
+        </div>
+        <div class="flex justify-between gap-2 mt-4">
+          <button class="flex-1 bg-gray-100 hover:bg-gray-900 text-gray-700 font-semibold py-2 rounded-lg" onclick="copyNumber('999')"><i class="fa-regular fa-copy"></i> Copy</button>
+          <button class="flex-1 bg-green-600 hover:bg-green-700 text-white font-semibold py-2 rounded-lg" onclick="makeCall('Police','999')"><i class="fa-solid fa-phone"></i> Call</button>
+        </div>
+      </div>
 
+      <!-- Card 3 -->
+      <div class="bg-white shadow rounded-xl p-5 flex flex-col justify-between">
+        <div>
+          <div class="flex items-center justify-between mb-3">
+            <img src="./assets/fire-service.png" alt="Fire Service" class="w-8 h-8 px-1 py-1 border-red-300 bg-red-100 text-red-600 rounded-lg">
+            <i class="fa-regular fa-heart heart-icon cursor-pointer"></i>
+          </div>
+          <h2 class="text-lg font-bold">Fire Service Number</h2>
+          <p class="text-gray-500 text-sm">Fire Service</p>
+          <p class="mt-2 text-xl font-extrabold">999</p>
+          <span class="inline-block mt-2 px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-xs font-semibold">Fire</span>
+        </div>
+        <div class="flex justify-between gap-2 mt-4">
+          <button class="flex-1 bg-gray-100 hover:bg-gray-900 text-gray-700 font-semibold py-2 rounded-lg" onclick="copyNumber('999')"><i class="fa-regular fa-copy"></i> Copy</button>
+          <button class="flex-1 bg-green-600 hover:bg-green-700 text-white font-semibold py-2 rounded-lg" onclick="makeCall('Fire Service','999')"><i class="fa-solid fa-phone"></i> Call</button>
+        </div>
+      </div>
 
+      <!-- Card 4 -->
+      <div class="bg-white shadow rounded-xl p-5 flex flex-col justify-between">
+        <div>
+          <div class="flex items-center justify-between mb-3">
+            <img src="./assets/ambulance.png" alt="Ambulance" class="w-8 h-8 px-1 py-1 border-red-300 bg-red-100 text-red-600 rounded-lg">
+            <i class="fa-regular fa-heart heart-icon cursor-pointer"></i>
+          </div>
+          <h2 class="text-lg font-bold">Ambulance Service</h2>
+          <p class="text-gray-500 text-sm">Ambulance</p>
+          <p class="mt-2 text-xl font-extrabold">1994-999999</p>
+          <span class="inline-block mt-2 px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-xs font-semibold">Health</span>
+        </div>
+        <div class="flex justify-between gap-2 mt-4">
+          <button class="flex-1 bg-gray-100 hover:bg-gray-900 text-gray-700 font-semibold py-2 rounded-lg" onclick="copyNumber('1994-999999')"><i class="fa-regular fa-copy"></i> Copy</button>
+          <button class="flex-1 bg-green-600 hover:bg-green-700 text-white font-semibold py-2 rounded-lg" onclick="makeCall('Ambulance','1994-999999')"><i class="fa-solid fa-phone"></i> Call</button>
+        </div>
+      </div>
+
+      <!-- Card 5 -->
+      <div class="bg-white shadow rounded-xl p-5 flex flex-col justify-between">
+        <div>
+          <div class="flex items-center justify-between mb-3">
+            <img src="./assets/emergency.png" alt="Women & Child" class="w-8 h-8 px-1 py-1 border-red-300 bg-red-100 text-red-600 rounded-lg">
+            <i class="fa-regular fa-heart heart-icon cursor-pointer"></i>
+          </div>
+          <h2 class="text-lg font-bold">Women & Child Helpline</h2>
+          <p class="text-gray-500 text-sm">Women & Child</p>
+          <p class="mt-2 text-xl font-extrabold">109</p>
+          <span class="inline-block mt-2 px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-xs font-semibold">Help</span>
+        </div>
+        <div class="flex justify-between gap-2 mt-4">
+          <button class="flex-1 bg-gray-100 hover:bg-gray-900 text-gray-700 font-semibold py-2 rounded-lg" onclick="copyNumber('109')"><i class="fa-regular fa-copy"></i> Copy</button>
+          <button class="flex-1 bg-green-600 hover:bg-green-700 text-white font-semibold py-2 rounded-lg" onclick="makeCall('Women & Child','109')"><i class="fa-solid fa-phone"></i> Call</button>
+        </div>
+      </div>
+
+      <!-- Card 6 -->
+      <div class="bg-white shadow rounded-xl p-5 flex flex-col justify-between">
+        <div>
+          <div class="flex items-center justify-between mb-3">
+            <img src="./assets/emergency.png" alt="Anti-Corruption" class="w-8 h-8 px-1 py-1 border-red-300 bg-red-100 text-red-600 rounded-lg">
+            <i class="fa-regular fa-heart heart-icon cursor-pointer"></i>
+          </div>
+          <h2 class="text-lg font-bold">Anti-Corruption Helpline</h2>
+          <p class="text-gray-500 text-sm">Anti-Corruption</p>
+          <p class="mt-2 text-xl font-extrabold">106</p>
+          <span class="inline-block mt-2 px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-xs font-semibold">Govt.</span>
+        </div>
+        <div class="flex justify-between gap-2 mt-4">
+          <button class="flex-1 bg-gray-100 hover:bg-gray-900 text-gray-700 font-semibold py-2 rounded-lg" onclick="copyNumber('106')"><i class="fa-regular fa-copy"></i> Copy</button>
+          <button class="flex-1 bg-green-600 hover:bg-green-700 text-white font-semibold py-2 rounded-lg" onclick="makeCall('Anti-Corruption','106')"><i class="fa-solid fa-phone"></i> Call</button>
+        </div>
+      </div>
+
+      <!-- Card 7 -->
+      <div class="bg-white shadow rounded-xl p-5 flex flex-col justify-between">
+        <div>
+          <div class="flex items-center justify-between mb-3">
+            <img src="./assets/emergency.png" alt="Electricity" class="w-8 h-8 px-1 py-1 border-red-300 bg-red-100 text-red-600 rounded-lg">
+            <i class="fa-regular fa-heart heart-icon cursor-pointer"></i>
+          </div>
+          <h2 class="text-lg font-bold">Electricity Helpline</h2>
+          <p class="text-gray-500 text-sm">Electricity Outage</p>
+          <p class="mt-2 text-xl font-extrabold">16456</p>
+          <span class="inline-block mt-2 px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-xs font-semibold">Electricity</span>
+        </div>
+        <div class="flex justify-between gap-2 mt-4">
+          <button class="flex-1 bg-gray-100 hover:bg-gray-900 text-gray-700 font-semibold py-2 rounded-lg" onclick="copyNumber('16456')"><i class="fa-regular fa-copy"></i> Copy</button>
+          <button class="flex-1 bg-green-600 hover:bg-green-700 text-white font-semibold py-2 rounded-lg" onclick="makeCall('Electricity','16456')"><i class="fa-solid fa-phone"></i> Call</button>
+        </div>
+      </div>
+
+      <!-- Card 8 -->
+      <div class="bg-white shadow rounded-xl p-5 flex flex-col justify-between">
+        <div>
+          <div class="flex items-center justify-between mb-3">
+            <img src="./assets/brac.png" alt="Brac" class="w-8 h-8 px-1 py-1 border-red-300 bg-red-100 text-red-600 rounded-lg">
+            <i class="fa-regular fa-heart heart-icon cursor-pointer"></i>
+          </div>
+          <h2 class="text-lg font-bold">Brac Helpline</h2>
+          <p class="text-gray-500 text-sm">Brac</p>
+          <p class="mt-2 text-xl font-extrabold">16445</p>
+          <span class="inline-block mt-2 px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-xs font-semibold">NGO</span>
+        </div>
+        <div class="flex justify-between gap-2 mt-4">
+          <button class="flex-1 bg-gray-100 hover:bg-gray-900 text-gray-700 font-semibold py-2 rounded-lg" onclick="copyNumber('16445')"><i class="fa-regular fa-copy"></i> Copy</button>
+          <button class="flex-1 bg-green-600 hover:bg-green-700 text-white font-semibold py-2 rounded-lg" onclick="makeCall('Brac Helpline','16445')"><i class="fa-solid fa-phone"></i> Call</button>
+        </div>
+      </div>
+
+      <!-- Card 9 -->
+      <div class="bg-white shadow rounded-xl p-5 flex flex-col justify-between">
+        <div>
+          <div class="flex items-center justify-between mb-3">
+            <img src="./assets/Bangladesh-Railway.png" alt="Railway" class="w-8 h-8 px-1 py-1 border-red-300 bg-red-100 text-red-600 rounded-lg">
+            <i class="fa-regular fa-heart heart-icon cursor-pointer"></i>
+          </div>
+          <h2 class="text-lg font-bold">Bangladesh Railway Helpline</h2>
+          <p class="text-gray-500 text-sm">Bangladesh Railway</p>
+          <p class="mt-2 text-xl font-extrabold">163</p>
+          <span class="inline-block mt-2 px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-xs font-semibold">Travel</span>
+        </div>
+        <div class="flex justify-between gap-2 mt-4">
+          <button class="flex-1 bg-gray-100 hover:bg-gray-900 text-gray-700 font-semibold py-2 rounded-lg" onclick="copyNumber('163')"><i class="fa-regular fa-copy"></i> Copy</button>
+          <button class="flex-1 bg-green-600 hover:bg-green-700 text-white font-semibold py-2 rounded-lg" onclick="makeCall('Railway','163')"><i class="fa-solid fa-phone"></i> Call</button>
+        </div>
+      </div>
+
+    </section>
+
+    <!-- Call History Section -->
+    <aside class="bg-white shadow rounded-xl p-5">
+      <div class="flex justify-between items-center mb-4">
+        <h2 class="text-lg font-bold flex items-center gap-2"><i class="fa-regular fa-clock"></i> Call History</h2>
+        <button class="bg-green-700 hover:bg-green-600 text-white px-5 py-2 rounded-full text-sm" onclick="clearHistory()">Clear</button>
+      </div>
+      <ul id="historyList" class="space-y-2 text-sm text-gray-700 max-h-[500px] overflow-y-auto">
+        <!-- Dynamic history items -->
+      </ul>
+    </aside>
+  </main>
+
+  <script src="index.js"></script>
 </body>
+
 </html>
