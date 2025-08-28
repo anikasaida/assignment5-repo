@@ -1,4 +1,4 @@
-// ====== Initial Setup ======
+//Initial Setup
 let heartCount = 0;
 let copyCount = 0;
 let coinCount = 100;
@@ -10,22 +10,18 @@ const copyCountEl = document.getElementById("copyCount");
 const coinCountEl = document.getElementById("coinCount");
 const historyList = document.getElementById("historyList");
 
-// ====== Heart Click Handler ======
+//Heart Click Handler
 heartIcons.forEach(icon => {
   icon.addEventListener("click", function () {
-    // Prevent double-clicks
-    if (icon.classList.contains("fa-solid")) return;
 
     heartCount++;
     heartCountEl.innerText = heartCount;
 
-    // Change icon to solid red heart
-    icon.classList.replace("fa-regular", "fa-solid");
-    icon.classList.add("text-red-500");
+    
   });
 });
 
-// ====== Copy Number Function ======
+//Copy Number Function
 function copyNumber(number) {
   navigator.clipboard.writeText(number)
     .then(() => {
@@ -38,7 +34,7 @@ function copyNumber(number) {
     });
 }
 
-// ====== Call Function ======
+//Call Function
 function makeCall(serviceName, number) {
   if (coinCount < 20) {
     alert("Not enough coins to make this call.");
@@ -57,7 +53,7 @@ function makeCall(serviceName, number) {
   historyList.prepend(li);
 }
 
-// ====== Clear History ======
+//Clear History
 function clearHistory() {
   historyList.innerHTML = "";
 }
