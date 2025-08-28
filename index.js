@@ -1,8 +1,3 @@
-//Initial Setup
-let heartCount = 0;
-let copyCount = 0;
-let coinCount = 100;
-
 // DOM references
 const heartIcons = document.querySelectorAll(".heart-icon");
 const heartCountEl = document.getElementById("heartCount");
@@ -10,40 +5,40 @@ const copyCountEl = document.getElementById("copyCount");
 const coinCountEl = document.getElementById("coinCount");
 const historyList = document.getElementById("historyList");
 
-//Heart Click Handler
+// Heart Click Handler
 heartIcons.forEach(icon => {
   icon.addEventListener("click", function () {
-
-    heartCount++;
-    heartCountEl.innerText = heartCount;
-
-    
+    let current = parseInt(heartCountEl.innerText);
+    heartCountEl.innerText = current + 1;
   });
 });
 
-//Copy Number Function
+// Copy Number Function
 function copyNumber(number) {
   navigator.clipboard.writeText(number)
     .then(() => {
       alert(`Copied ${number} to clipboard`);
-      copyCount++;
-      copyCountEl.innerText = copyCount;
+      let current = parseInt(copyCountEl.innerText);
+      copyCountEl.innerText = current + 1;
     })
     .catch(err => {
       console.error("Copy failed", err);
     });
 }
 
-//Call Function
+// Call Function
 function makeCall(serviceName, number) {
-  if (coinCount < 20) {
-    alert("Not enough coins to make this call.");
+  let currentCoins = parseInt(coinCountEl.innerText);
+
+  if (currentCoins < 20) {
+    alert("❌ Not enough coins to make this call.");
     return;
   }
 
-  alert(`Calling ${serviceName} at ${number}`);
-  coinCount -= 20;
-  coinCountEl.innerText = coinCount;
+  alert(`📞 Calling ${serviceName} at ${number}...`);
+
+  currentCoins -= 20;
+  coinCountEl.innerText = currentCoins;
 
   const now = new Date();
   const time = now.toLocaleTimeString();
@@ -53,7 +48,7 @@ function makeCall(serviceName, number) {
   historyList.prepend(li);
 }
 
-//Clear History
+// Clear History
 function clearHistory() {
   historyList.innerHTML = "";
 }
