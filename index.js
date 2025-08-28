@@ -25,8 +25,6 @@ function copyNumber(number) {
       console.error("Copy failed", err);
     });
 }
-
-// Call Function
 function makeCall(serviceName, number) {
   let currentCoins = parseInt(coinCountEl.innerText);
 
@@ -43,10 +41,18 @@ function makeCall(serviceName, number) {
   const now = new Date();
   const time = now.toLocaleTimeString();
 
+  // Create card element
   const li = document.createElement("li");
-  li.innerText = `${serviceName} (${number}) — ${time}`;
+  li.className = "bg-gray-100 p-3 rounded-lg shadow mb-2 flex justify-between items-center text-sm font-medium";
+  
+  li.innerHTML = `
+    <span>📞 ${serviceName} (${number})</span>
+    <span class="text-gray-500 text-xs">${time}</span>
+  `;
+  
   historyList.prepend(li);
 }
+
 
 // Clear History
 function clearHistory() {
